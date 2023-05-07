@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Tour = ({ id, image, info, price, name, removeTour }) => {
+const Tour = ({ id, image, info, price, name, removeTour, setTour}) => {
   const [readmore, setReadMore] = useState(false);
   return (
     <article className="single-tour">

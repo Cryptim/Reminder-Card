@@ -197,8 +197,8 @@ main {
   height: 2.5rem;
   display: grid;
   place-items: center;
-  border-radius: 20%;
-  transform: translateY(50%);
+  border-radius: 50%;
+  transform: translateY(-1500%);
   background: var(--clr-primary-5);
   color: var(--clr-white);
 }

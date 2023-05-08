@@ -38,10 +38,10 @@ const Review = () => {
   return (
     <article className="review">
       <div>
+        <img src={image} alt={name} className="person-img" />
         <span className="quote-icon">
           <FaQuoteRight />
         </span>
-        <img src={image} alt={name} className="person-img" />
       </div>
       <h4 className="author">{name}</h4>
       <p className="job">{job}</p>

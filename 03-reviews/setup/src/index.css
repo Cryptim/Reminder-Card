@@ -183,21 +183,22 @@ main {
 .person-img {
   width: 100%;
   display: block;
+  margin: 0 auto;
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
   position: relative;
 }
 .quote-icon {
-  position: absolute;
-  top: 0;
+  /* position: absolute; */
+  top: 50%;
   left: 0;
   width: 2.5rem;
   height: 2.5rem;
   display: grid;
   place-items: center;
-  border-radius: 50%;
-  transform: translateY(25%);
+  border-radius: 20%;
+  transform: translateY(50%);
   background: var(--clr-primary-5);
   color: var(--clr-white);
 }
@@ -252,4 +253,3 @@ main {
   background: var(--clr-primary-5);
   color: var(--clr-primary-1);
 }
-

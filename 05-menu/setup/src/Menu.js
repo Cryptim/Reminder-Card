@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Menu = ({ items, Categories }) => {
+  const [readmore, setReadMore] = useState(true);
   return (
     <div className="section-center">
       {items.map((menuItems) => {
@@ -13,7 +14,17 @@ const Menu = ({ items, Categories }) => {
                 <h4>{title}</h4>
                 <h4 className="price">${price}</h4>
               </header>
-              <p className="item-text">{desc}</p>
+              <p className="item-text">
+                {readmore ? desc : `${desc.substring(0, 30)}....`}
+                <button
+                  className="btn"
+                  onClick={() => {
+                    setReadMore(!readmore);
+                  }}
+                >
+                  {readmore ? "show less" : "read more"}
+                </button>
+              </p>
             </div>
           </article>
         );

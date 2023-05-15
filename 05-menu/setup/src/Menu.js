@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 
-const Menu = ({ items, Categories }) => {
+const Menu = ({ items, Categories, removeItem }) => {
   const [readmore, setReadMore] = useState(true);
+function removeItem(items,idToRemove){
+  return items.filter((item)=>item.id !==idToRemove)
+}
   return (
     <div className="section-center">
       {items.map((menuItems) => {
@@ -25,6 +28,7 @@ const Menu = ({ items, Categories }) => {
                   {readmore ? "show less" : "read more"}
                 </button>
               </p>
+              <button onClick={() => removeItem(title)}>Remove item</button>
             </div>
           </article>
         );

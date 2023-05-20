@@ -27,6 +27,7 @@ function App() {
 
   //destructuring the array of jobs coming from the api
   const { company, dates, duties, title } = jobs[value];
+
   return (
     <section className="section">
       <div className="title">
@@ -58,9 +59,8 @@ function App() {
           {duties.map((duty, index) => {
             return (
               <div key={index} className="job-desc">
-                <FaAngleDoubleRight className="job-icon">
-                  <p>{duty}</p>
-                </FaAngleDoubleRight>
+                <FaAngleDoubleRight className="job-icon"></FaAngleDoubleRight>
+                <p>{duty}</p>
               </div>
             );
           })}

@@ -3,10 +3,10 @@ import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 import { FaQuoteRight } from "react-icons/fa";
 import data from "./data";
 function App() {
-  const [people, setpeole] = useState(data);
+  const [people, setpeople] = useState(data);
   const [index, setIndex] = useState(0);
   return (
-    <section>
+    <section className="section">
       <div className="title">
         span
         <span>/</span>Review

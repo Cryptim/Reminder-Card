@@ -5,6 +5,7 @@ import { FaAngleDoubleRight } from "react-icons/fa";
 const url = "https://course-api.com/react-tabs-project";
 function App() {
   const [loading, setLoading] = useState(true);
+  // const [jobs, setJobs] = useState([]);
   const [jobs, setJobs] = useState([]);
   const [value, setValue] = useState(0);
   const fetchJobs = async () => {
@@ -14,7 +15,7 @@ function App() {
     setLoading(false);
   };
   useEffect(() => {
-    fetchJobs();
+    fetchJobs(); //on initial render
   }, []); //run once the app renders
   if (loading) {
     return (
@@ -23,6 +24,7 @@ function App() {
       </section>
     );
   }
+
   //destructuring the array of jobs coming from the api
   const { company, dates, duties, title } = jobs[value];
   return (

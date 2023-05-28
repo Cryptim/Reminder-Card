@@ -13,7 +13,7 @@ const AppProvider = ({ children }) => {
     setIsModalOpen(true);
   };
   const closeModal = () => {
-    setIsModalOpen(true);
+    setIsModalOpen(false);
   };
   return (
     <AppContext.Provider

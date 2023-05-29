@@ -1,23 +1,23 @@
 export default [
   {
     id: 1,
-    title: 'Samsung Galaxy S7',
+    title: "Samsung Galaxy S7",
     price: 599.99,
-    img: 'https://dl.airtable.com/.attachments/91ee456448cef47deec553a2ea3fa8ad/b08bec68/phone-2_ohtt5s.png',
+    img: "data:image/jpeg;base64,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",
     amount: 1,
   },
   {
     id: 2,
-    title: 'google pixel ',
+    title: "google pixel ",
     price: 499.99,
-    img: 'https://dl.airtable.com/.attachments/91c88ae8c1580e2b762ecb3f73ed1eed/a633139a/phone-1_gvesln.png',
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPYNl3Aou-P_y8En5NX8hIJribXX4wL76DRw&usqp=CAU",
     amount: 1,
   },
   {
     id: 3,
-    title: 'Xiaomi Redmi Note 2',
+    title: "Xiaomi Redmi Note 2",
     price: 699.99,
-    img: 'https://dl.airtable.com/.attachments/bae9208dc34f35128749ecda5b999e84/337c285d/phone-3_h2s6fo.png',
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFHOK3zaz7gdWfDSs3Wl6JqXlb7w7Zry4nDw&usqp=CAU",
     amount: 1,
   },
 ];

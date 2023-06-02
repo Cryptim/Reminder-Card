@@ -2,12 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 const About = () => {
   return (
-    <div>
-      <h2>About Page</h2>
-      <Link to="/" className="btn">
-        Home
-      </Link>
-    </div>
+    <section className="section about-section">
+      <h1 className="section-title">about us</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt dicta
+        facilis modi perferendis exercitationem, ullam, odit laudantium nemo
+        nesciunt a aperiam vel veniam maxime non similique expedita cupiditate
+        corporis iure aliquam mollitia sit. Cum officia sapiente, quis
+        voluptatibus impedit voluptates.
+      </p>
+    </section>
   );
 };
 

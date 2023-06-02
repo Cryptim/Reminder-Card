@@ -18,17 +18,23 @@ import SharedLayout from "./pages/sharedLayout";
 import SingleProduct from "./pages/SingleProduct";
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<SharedLayout />}>
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="products" element={<Products />} />
-          <Route path="products/:productId" element={<SingleProduct />} />
-          <Route path="*" element={<Error />} />
+    <Router>
+      <Navbar />
+      <Route>
+        <Route exact path="/">
+          <Home />
         </Route>
-      </Routes>
-    </BrowserRouter>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/cocktail/:id">
+          <SingleCocktail />
+        </Route>
+        <Route path="*">
+          <Error />
+        </Route>
+      </Route>
+    </Router>
   );
 }
 

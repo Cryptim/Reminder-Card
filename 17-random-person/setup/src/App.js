@@ -15,7 +15,13 @@ function App() {
   const [title, setTitle] = useState("name");
   const [value, setValue] = useState("Random value");
   const handleValue = (e) => {
-    console.log(e.target.value);
+    if (e.target.classList.contains(icons)) {
+      const newValue = e.target.dataset.data.label;
+      console.log(person);
+      console.log(newValue);
+      setTitle(newValue);
+      setValue(person[newValue]);
+    }
   };
   const getPerson = async () => {
     const response = await fetch(url);

@@ -20,17 +20,26 @@ function App() {
   if (loading) {
     return <Loading />;
   }
-  const { question, incorrect_answer, correct_answer } = questions[index];
-  const answers = [...incorrect_answers, correct_answer];
+  const { question, incorrect_answers, correct_answer } = questions[index];
+  // const answers = [...incorrect_answers, correct_answer];
+  let answers = [...incorrect_answers];
+  const tempIndex = Math.floor(Math.random() * 4);
+  console.log(tempIndex);
+  if (tempIndex === 3) {
+    answers.push(correct_answer);
+  } else {
+    answers.push(answers[tempIndex]);
+    answers[tempIndex] = correct_answer;
+  }
   return (
     <main>
-      {/* <Modal /> */}
+      <Modal />
       <section className="quiz">
         <p className="correct_answers">
           correct_answers:{correct}/{index}
         </p>
         <artcile className="container">
-          <h2 dangerouslySetInnerHTML={{ _html: question }} />
+          <h2 dangerouslySetInnerHTML={{ __html: question }} />
           <div className="btn-container">
             {answers.map((answer, index) => {
               return (
@@ -38,7 +47,7 @@ function App() {
                   key={index}
                   className="answer-btn"
                   onClick={() => checkAnswer(correct_answer === answer)}
-                  dangerouslySetInnerHTML={{ _html: answer }}
+                  dangerouslySetInnerHTML={{ __html: answer }}
                 />
               );
             })}
